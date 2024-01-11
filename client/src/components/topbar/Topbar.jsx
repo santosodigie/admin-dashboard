@@ -8,8 +8,8 @@ const Topbar = () => {
     <div className="topbar w-full h-[50px] bg-white sticky top-0 z-50">
       <div className="topbarWrapper h-full pl-5 pr-5 flex items-center justify-between">
         <div className="topLeft">
-          <span className="logo font-bold text-3xl text-[#020887] cursor-pointer">
-            santosadmin
+          <span className="logo font-bold text-3xl text-[#2c2ead] cursor-pointer">
+            SantosAdmin
           </span>
         </div>
         <div className="topRight flex items-center">
