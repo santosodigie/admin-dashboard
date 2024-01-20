@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import LineStyleIcon from "@mui/icons-material/LineStyle";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
@@ -21,15 +22,17 @@ const Sidebar = () => {
             Dashboard
           </h3>
           <ul className="sidebarList p-1">
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active">
-              <LineStyleIcon className=" mr-1 text-2xl" />
-              Home
-            </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <Link to="/">
+              <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active cursor-pointer">
+                <LineStyleIcon className=" mr-1 text-2xl" />
+                Home
+              </li>
+            </Link>
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <TimelineIcon className=" mr-1 text-2xl" />
               Analytics
             </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <TrendingUpIcon className=" mr-1 text-2xl" />
               Sales
             </li>
@@ -40,19 +43,23 @@ const Sidebar = () => {
             Quick Menu
           </h3>
           <ul className="sidebarList p-1">
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active">
-              <PersonOutlineIcon className=" mr-1 text-2xl" />
-              Users
-            </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
-              <StorefrontIcon className=" mr-1 text-2xl" />
-              Products
-            </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <Link to="/users">
+              <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active cursor-pointer">
+                <PersonOutlineIcon className=" mr-1 text-2xl" />
+                Users
+              </li>
+            </Link>
+            <Link to="/products">
+              <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
+                <StorefrontIcon className=" mr-1 text-2xl" />
+                Products
+              </li>
+            </Link>
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <EuroIcon className=" mr-1 text-2xl" />
               Transactions
             </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <BarChartIcon className=" mr-1 text-2xl" />
               Reports
             </li>
@@ -63,15 +70,15 @@ const Sidebar = () => {
             Notifications
           </h3>
           <ul className="sidebarList p-1">
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active cursor-pointer">
               <MailOutlineIcon className=" mr-1 text-2xl" />
               Mail
             </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <DynamicFeedIcon className=" mr-1 text-2xl" />
               Feedback
             </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <ChatBubbleOutlineIcon className=" mr-1 text-2xl" />
               Messages
             </li>
@@ -82,15 +89,15 @@ const Sidebar = () => {
             Staff
           </h3>
           <ul className="sidebarList p-1">
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] active cursor-pointer">
               <WorkOutlineIcon className=" mr-1 text-2xl" />
               Manage
             </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <TimelineIcon className=" mr-1 text-2xl" />
               Analytics
             </li>
-            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff]">
+            <li className="sidebarListItem p-2 flex items-center rounded-[10px] active:bg-[#d1d2ff] hover:bg-[#d1d2ff] cursor-pointer">
               <ReportIcon className=" mr-1 text-2xl" />
               Reports
             </li>
